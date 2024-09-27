@@ -1,2 +1,3 @@
 from . import users
-from . import photos
+from . import project
+from . import task
