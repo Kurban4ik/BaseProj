@@ -4,7 +4,6 @@ import os
 from flask import Blueprint, request
 from flask_restful import Api, Resource, reqparse
 
-from changer import ImageChange
 from data import db_session
 from data.users import User
 

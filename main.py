@@ -7,7 +7,6 @@ from flask import Flask, render_template, redirect, request, abort, send_from_di
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from flask_restful import abort
 from blueprints.api_blueprint import api_blueprint
-from changer import ImageChange
 from data.project import Project
 from forms.user import RegisterForm, LoginForm
 from data.users import User
@@ -77,8 +76,8 @@ def main():
     cur_dir = os.path.dirname(os.path.realpath(__file__))
     print(cur_dir)
     db_session.global_init("db/blogs.db")
-    app.run()
-    #serve(app, port=5000)
+    #app.run()
+    serve(app, port=5000)
 
 
 # @app.route('/news', methods=['GET', 'POST'])
